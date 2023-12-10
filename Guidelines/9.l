@@ -1,11 +1,19 @@
-%option noyywrap
 %{
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
-
-#include"y.tab.h"
+#include "y.tab.h"
 %}
+letter [a-z]
+digit [0-9]
+newline [\n]
 %%
-[0-9]+ {yylval = stoi(yytext);return NUM;}
+{letter} { return letter ;}
+{digit} { return digit ; }
+{newline} { return newline ;}
+['+'|'*'|'/'] {return operator;}
+['\-'] {return minus;}
+['('] {return ob;}
+[')'] {return cb;}
+. { printf("Invalid Variable\n");}
 %%
+int yywrap(){
+    return 1;
+}
