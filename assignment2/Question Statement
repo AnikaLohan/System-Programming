@@ -1,0 +1,11 @@
+Write a program that reads from terminal user-entered boolean expression.
+Boolean expressions have boolean operators (see table 1) applied to logical values (0 or 1).
+The logical values can be supplied by:
+(A) directly in the expression, ex: 0+1, or
+(B) can be assigned to a variable. The variables are represented by any letter
+followed by a number, ex: x1, t2, s26 - are all variables; values can be assigned
+to these variables using equality operator, ex: x1 = 0.
+The following questions need to be implemented as per the input:
+1. Enter expression from the terminal, and upon hitting enter, the value of
+the boolean expression should be displayed.
+2. Use bitwise operators (see table 21) on variables2.
