@@ -1,0 +1,100 @@
+
+Write a program that reads an input file, and constructs a list of tokens for that
+file. Your program is to be written in CEasy. The list of tokens accepted by
+CEasy is shown in Table 1.
+The following questions also need to be implemented as per the input file:
+1. Count the number of words, characters, blank spaces, and lines
+2. Create another file where the lines from input file are numbered
+
+
+Sample Input
+void main ( )
+{
+int sum =0;
+fo r ( int i =0; i <10; i=i +1)
+{
+sum = sum + i + 1 0. 4 3 + 3 4. E4 + 4 5. 3 4E−4 + E43 + . 2 3 ;
+}
+}
+3 Sample Output
+Class : Lexeme
+keyword : void
+identifier : main
+( : (
+) : )
+{ : {
+keyword : int
+identifier : sum
+= : =
+num : 0
+; : ;
+1
+System Programming August 2023
+Assigned: October 05, 2023 Due: October 12, 2023
+keyword : for
+( : (
+keyword : int
+identifier : i
+= : =
+num : 0
+; : ;
+identifier : j
+< : <
+num : 10
+; : ;
+identifier : i
+= : =
+identifier : i
++ : +
+num : 1
+) : )
+{ : {
+identifier : sum
+= : =
+identifier : sum
++ : +
+identifier : i
++ : +
+num : 10.43
++ : +
+num : 34.E4
++ : +
+num: 45.34E-4
++ : +
+identifier : E43
++ : +
+Error : .
+num : 23
+; : ;
+} : }
+} : }
+
+
+
+
+
+
+Token Type Lexical Specification
+keyword One of the strings while, if, else, return, break, continue, int, float, void
+identifier Taken Id identifiers matches a letter followed by letters or digits or underscore
+letter -> [A-Za-z]
+digit ->[0-9]
+id -> letter(letter | digit _ ) *
+num Token num matches unsigned numbers
+digits -> digit digit*
+optional-fraction -> (.digits)| ϵ
+optional-exponent -> (E(+|-| ϵ )digits)| ϵ
+num -> digits optional-fraction optional-exponent
+addop +,-
+mulop *,/
+relop <,>,>=,<=,==,!=
+and &&
+or ||
+not !
+) (
+) )
+{ {
+} }
+[ [
+] ]
+Table 1: Table of Lexical specifications for tokens
