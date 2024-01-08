@@ -1,7 +1,4 @@
-/*
-    Program 10 : Write a Program in YACC to evaluate an expression (simple calculator program for addition and subtraction, multiplication, division).
-    Author : Lalit
-*/
+
 %token INTEGER VARIABLE
 %left '+' '-'
 %left '*' '/'
